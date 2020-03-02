@@ -18,7 +18,8 @@ class ArticlesController < ApplicationController
    if @article.save
     redirect_to @article
    else
-    render 'new'
+    render 'new' # 这里用render（而不是redirect_to），会把原来的数据传回给new这个页面
+
    end
   end
 
