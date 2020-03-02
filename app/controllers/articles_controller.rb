@@ -1,30 +1,36 @@
 class ArticlesController < ApplicationController
 
+  # 基本的验证
   http_basic_authenticate_with name: "ljw", password: "123", except: [:index, :show]
 
   # skip_before_action :verify_authenticity_token, :only => [:create, :new]
 
+  # 显示所有的文章
   def index
     logger.info "---> entering [#{__method__}] action of article controller..."
     @articles = Article.all
   end
 
+  # 显示新建文章的页面
   def new
     logger.info "---> entering [#{__method__}] action of article controller..."
     @article = Article.new
   end
 
+  # 编辑页面
   def edit
     logger.info "---> entering [#{__method__}] action of article controller..."
 
     @article = Article.find(params[:id])
   end
 
+  # 新建文章，存入数据库
   def create
     logger.info "---> entering [#{__method__}] action of article controller..."
 
    @article = Article.new(article_params)
 
+   # 如果未通过article model的验证，则重定向至新建文章的页面
    if @article.save
     logger.info "---> entering [#{__method__}] action of article controller..."
 
@@ -35,17 +41,20 @@ class ArticlesController < ApplicationController
    end
   end
 
+  # 显示某个文章的标题和内容
   def show
     logger.info "---> entering [#{__method__}] action of article controller..."
 
     @article = Article.find(params[:id])
   end
 
+  # 更新文章
   def update
     logger.info "---> entering [#{__method__}] action of article controller..."
 
     @article = Article.find(params[:id])
 
+    # 如果未通过article model的验证，则重定向至编辑文章的页面
     if @article.update(article_params)
       redirect_to @article
     else
