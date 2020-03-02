@@ -59,9 +59,17 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
+<<<<<<< HEAD
     @article.destroy
 
     redirect_to articles_path
+=======
+
+    @article.destroy
+
+    redirect_to articles_path
+
+>>>>>>> issue deletion failed 删除文章的功能没有实现
   end
 
   private
