@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+  http_basic_authenticate_with name: "ljw", password: "123", except: [:index, :show]
+
   # skip_before_action :verify_authenticity_token, :only => [:create, :new]
 
   def index
@@ -15,7 +17,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-
    @article = Article.new(article_params)
 
    if @article.save
