@@ -2,6 +2,9 @@ class ArticlesController < ApplicationController
 
   # skip_before_action :verify_authenticity_token, :only => [:create, :new]
 
+  def index
+    @articles = Article.all
+  end
 
   def new
   end
