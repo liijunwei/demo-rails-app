@@ -26,18 +26,13 @@ class ArticlesController < ApplicationController
 
   # 新建文章，存入数据库
   def create
-    logger.info "---> entering [#{__method__}] action of article controller..."
-
    @article = Article.new(article_params)
-
-   # 如果未通过article model的验证，则重定向至新建文章的页面
    if @article.save
     logger.info "---> entering [#{__method__}] action of article controller..."
 
     redirect_to @article
    else
     render 'new' # 这里用render（而不是redirect_to），会把原来的数据传回给new这个页面
-
    end
   end
 
@@ -60,6 +55,13 @@ class ArticlesController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    redirect_to articles_path
   end
 
   private
