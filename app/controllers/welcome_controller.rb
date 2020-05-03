@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   def index
 
     puts "hh"
-    byebug
+    # byebug
     Holidays.on(Date.civil(2008, 4, 25), :au)
 
 
