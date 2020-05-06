@@ -33,6 +33,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'holidays', '~> 8.2'
   gem 'awesome_print'
+  gem 'minitest-reporters', '~> 1.4', '>= 1.4.2'
 end
 
 group :development do

@@ -7,6 +7,6 @@ class WelcomeController < ApplicationController
     Holidays.on(Date.civil(2008, 4, 25), :au)
 
 
-    render json: {"code": 200}
+    # render json: {"code": 200}
   end
 end
