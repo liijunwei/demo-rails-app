@@ -33,7 +33,8 @@ group :test do
   gem 'webdrivers'
   gem 'minitest-rails', '~> 6.0', '>= 6.0.1'
   gem 'minitest-reporters', '~> 1.4', '>= 1.4.2'
-  gem 'factory_bot', '~> 5.2'
+  gem 'factory_bot'
+
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
