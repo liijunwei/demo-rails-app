@@ -49,9 +49,7 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'minitest-rails', '~> 6.0', '>= 6.0.1'
   gem 'minitest-reporters', '~> 1.4', '>= 1.4.2'
-  gem 'factory_bot'
 
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
