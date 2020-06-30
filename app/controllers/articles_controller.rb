@@ -9,6 +9,11 @@ class ArticlesController < ApplicationController
   def index
     logger.info "---> entering [#{__method__}] action of article controller..."
     @articles = Article.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @articles.to_csv, filename: "users-#{Date.today}.csv" }
+    end
   end
 
   # 显示新建文章的页面
