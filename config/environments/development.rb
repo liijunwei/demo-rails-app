@@ -61,4 +61,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.log_level = :debug
+  Time::DATE_FORMATS[:cus_format] = "Today is: %Y-%m-%d"
 end
