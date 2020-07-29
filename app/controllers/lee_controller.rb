@@ -10,6 +10,7 @@ class LeeController < ApplicationController
 
   private
   def say_hi
+    # controller里的方法, 可以直接用params这个参数
     puts "#{__method__} => #{params[:foo]}"
   end
 end
