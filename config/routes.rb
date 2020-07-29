@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'lee/hook'
   resources :microposts
   resources :users
   get 'welcome/index'
