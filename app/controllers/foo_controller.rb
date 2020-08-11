@@ -8,6 +8,7 @@ class FooController < ApplicationController
   def index
     @my_object = sample
     @beautifiedJson = JSON.pretty_generate @my_object
+    @my_object1 = @my_object
   end
 
   def sample
