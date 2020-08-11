@@ -11,3 +11,6 @@ class WelcomeController < ApplicationController
   # ensure
   #   p "#{__method__} => this piece of code has to be run.... => #{name_foo}"
   end
+
+
+end

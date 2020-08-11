@@ -4,6 +4,7 @@ class LeeController < ApplicationController
   def hook
     puts "neo..."
     puts "="*8
+    byebug
     say_hi
   end
 

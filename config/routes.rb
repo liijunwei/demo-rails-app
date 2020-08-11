@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'foo', to: 'foo#index'
+  get 'json_view', to: 'foo#json_view'
   post 'lee/hook'
   resources :microposts
   resources :users
