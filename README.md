@@ -1,3 +1,3 @@
 # README
 
-This is an blog for learning rails.
+This is a demo blog app for learning rails.
