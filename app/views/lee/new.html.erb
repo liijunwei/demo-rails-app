@@ -1,0 +1,18 @@
+<h1>Lee#new</h1>
+
+<%= form_for :whatever, url: lee_index_path do |f| %>
+  <p>
+    <%= f.label :key_foo %><br>
+    <%= f.text_field :key_foo %>
+  </p>
+
+  <p>
+    <%= f.label :value_foo %><br>
+    <%= f.text_area :value_foo %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>

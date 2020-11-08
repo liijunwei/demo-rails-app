@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   get 'foo', to: 'foo#index'
   get 'json_view', to: 'foo#json_view'
-  post 'lee/hook'
   resources :microposts
   resources :users
+  resources :lee
   get 'welcome/index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'users#index'
 
   resources :articles do
