@@ -11,12 +11,12 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'pry-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'holidays', '~> 8.2'
   gem 'awesome_print'
-  gem 'minitest-reporters', '~> 1.4', '>= 1.4.2'
 end
 
 group :development do
@@ -28,8 +28,8 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
+  # gem 'selenium-webdriver'
+  # gem 'webdrivers'
   gem 'minitest-rails', '~> 6.0', '>= 6.0.1'
   gem 'minitest-reporters', '~> 1.4', '>= 1.4.2'
   # gem 'factory_bot'
