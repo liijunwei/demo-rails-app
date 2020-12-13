@@ -15,8 +15,8 @@ set :keep_releases,    5
 ask :branch,           `git rev-parse --abbrev-ref HEAD`.chomp
 
 append :linked_files,  "config/master.key", "config/database.yml"
-# append :linked_dirs,   "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "node_modules"
-append :linked_dirs,   "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs,   "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "node_modules"
+# append :linked_dirs,   "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 
 # Default branch is :master

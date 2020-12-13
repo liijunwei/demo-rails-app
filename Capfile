@@ -7,10 +7,8 @@ install_plugin Capistrano::SCM::Git
 require "capistrano/rails/migrations"
 require "capistrano/rbenv"
 require "capistrano/bundler"
-# require 'capistrano/sidekiq'
 require 'capistrano/puma'
 require 'capistrano/puma/nginx'
-# require "whenever/capistrano"
 require "capistrano/rails/assets"
 
 install_plugin Capistrano::Puma
