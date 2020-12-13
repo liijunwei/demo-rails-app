@@ -4,8 +4,6 @@ lock "~> 3.14.1"
 set :application, "blog_demo"
 set :repo_url, "git@github.com:liijunwei/demo-rails-app.git"
 
-lock "~> 3.14.1"
-
 set :rbenv_ruby,       File.read('.ruby-version').strip
 set :rbenv_path,       '/home/webuser/.rbenv'
 set :rbenv_prefix,     "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
@@ -17,7 +15,8 @@ set :keep_releases,    5
 ask :branch,           `git rev-parse --abbrev-ref HEAD`.chomp
 
 append :linked_files,  "config/master.key", "config/database.yml"
-append :linked_dirs,   "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "node_modules"
+# append :linked_dirs,   "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "node_modules"
+append :linked_dirs,   "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 
 # Default branch is :master
