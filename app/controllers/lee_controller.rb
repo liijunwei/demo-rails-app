@@ -1,8 +1,12 @@
 class LeeController < ApplicationController
   skip_before_action :verify_authenticity_token, :only => [:hook]
+  around_action :worker1, only: :new
+  around_action :worker2, only: :new
 
+  # http://localhost:3000/lee/new
   def new
-
+    puts "Inside new action..."
+    render json: {demo: "xxxx"}
   end
 
   def create
@@ -27,6 +31,18 @@ class LeeController < ApplicationController
   private
   def my_params
     params.require(:whatever).permit(:key_foo, :value_foo)
+  end
+
+  def worker1
+    puts "Inside worker1... before yield"
+    yield
+    puts "Inside worker1... after yield"
+  end
+
+  def worker2
+    puts "Inside worker2... before yield"
+    yield
+    puts "Inside worker2... after yield"
   end
 
 end
