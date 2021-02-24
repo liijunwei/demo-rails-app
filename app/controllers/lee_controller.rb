@@ -6,7 +6,7 @@ class LeeController < ApplicationController
   # http://localhost:3000/lee/new
   def new
     puts "Inside new action..."
-    render json: {demo: "xxxx"}
+    render json: {demo: "xxxx"}, status: 200
   end
 
   def create
